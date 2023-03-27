@@ -1,0 +1,542 @@
+/* GENERAL STYLES STARTS*/
+:root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-light: hsl(252, 30%, 95%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-dark: hsl(252, 30%, 17%);
+
+  --border-radius: 2rem;
+  --search-padding: 0.2rem 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-dark);
+  background: var(--color-white);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.content-container {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 1.8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.text-bold {
+  font: 500;
+}
+
+.text-muted {
+  color: var(--color-gray);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.8rem;
+}
+
+i {
+  font-size: 1.3rem;
+}
+/* GENERAL STYLES ENDS*/
+
+/* NAVBAR STARTS*/
+nav {
+  width: 100%;
+  background: var(--color-white);
+  /* background: rgb(0, 0, 0); */
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container .logo-title .logo {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: normal;
+}
+
+nav .container .logo-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav .container .hamburger a span i {
+  color: rgb(3, 3, 3);
+  font-size: 1.7rem;
+}
+
+nav .container .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+nav .container .logo-title span i {
+  color: var(--color-danger);
+  font-size: 2rem;
+}
+
+nav .container .logo-title a {
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  color: rgb(76, 76, 76);
+}
+
+.search-bar {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+  border: 1px solid rgb(203, 203, 203);
+}
+
+.search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::placeholder {
+  color: var(--color-grey);
+  font-size: 1rem;
+}
+
+nav .create {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+nav .create i {
+  position: relative;
+}
+
+nav .create .notification-count {
+  background: var(--color-danger);
+  color: #fff;
+  font-size: 0.7rem;
+  width: fit-content;
+  border-radius: 0.8rem;
+  padding: 0.11rem 0.3rem;
+  position: absolute;
+  top: -0.3rem;
+  right: -0.9rem;
+}
+/* NAVBAR ENDS*/
+
+/* CONTENT STARTS */
+.contents {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-top: 6rem;
+}
+
+/* MAIN STARTS */
+.main {
+  background: rgb(255, 255, 255);
+}
+
+.main .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.main .video iframe,
+.main .video object,
+.main .video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main .description {
+  margin-top: 1rem;
+}
+
+.main .description h2 {
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600px;
+  margin-bottom: 1rem;
+}
+
+.main .description .icons-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main .description .icons-links .subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.main .description .icons-links .subscribe .logo-and-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.main .description .icons-links .subscribe .logo-and-name .channel-name h2 {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button {
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  background: black;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: all ease 300ms;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(54, 54, 54);
+}
+
+.main .description .icons-links .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main .description .icons-links .links .likes-and-dislikes {
+  background: rgb(208, 208, 208);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5rem;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.main .description .icons-links .links .likes-and-dislikes .like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  background: rgb(239, 239, 239);
+  padding: 0.5rem 1.1rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  transition: all ease 300ms;
+}
+
+.main .description .icons-links .links .likes-and-dislikes .like a i {
+  color: #454545;
+}
+
+.main .description .icons-links .links .likes-and-dislikes .like p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+}
+
+.vertical-line {
+  border-left: 1px solid rgb(156, 156, 156);
+  height: 1.7rem;
+}
+
+.main .description .icons-links .links .likes-and-dislikes .dislike {
+  background: rgb(239, 239, 239);
+  color: #454545;
+  padding: 0.5rem 1.1rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  transition: all ease 300ms;
+}
+
+.main .description .icons-links .links .likes-and-dislikes .like:hover,
+.main .description .icons-links .links .likes-and-dislikes .dislike:hover {
+  background: #e1e1e1;
+}
+
+.main .description .icons-links .links .share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  background: rgb(239, 239, 239);
+  padding: 0.3rem 1rem;
+  border-radius: 5rem;
+  transition: all ease 300ms;
+}
+
+.main .description .icons-links .links .share p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.main .description .icons-links .links .share:hover {
+  background: #e1e1e1;
+  cursor: pointer;
+}
+
+.main .description .icons-links .links .more {
+  background: rgb(239, 239, 239);
+  border-radius: 50%;
+  align-self: center;
+  text-align: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  transition: all ease 300ms;
+}
+
+.main .description .icons-links .links .more:hover {
+  background: #e1e1e1;
+  cursor: pointer;
+}
+/* MAIN ENDS */
+
+/* THUMBNAIL STARTS */
+
+.thumbnail .thumb-links {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.thumbnail .thumb-links .link a {
+  color: black;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  padding: 0.3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.3rem;
+}
+
+.thumbnail .thumb-links .link:nth-child(1) a {
+  background: #040404;
+  color: #fff;
+}
+
+.thumbnail .thumb-links span {
+  transition: all ease 300ms;
+  width: 2.3rem;
+  height: 2.3rem;
+  background: #f0f0f0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+}
+
+.thumbnail .content .content-details {
+  display: grid;
+  grid-template-columns: 0.8fr 1.1fr;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.thumbnail .content .content-details .video {
+  background: #fff;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.thumbnail .content .content-details .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail .content .content-details .details a {
+  opacity: 0.9;
+  font-size: 0.6rem;
+  color: #040404;
+}
+
+.thumbnail .content .content-details .details .details-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.thumbnail .content .content-details .details .small {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.thumbnail .content .content-details .details .views {
+  display: flex;
+  justify-content: start;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.thumbnail .content .content-details .details .views p {
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+
+/* THUMBNAIL ENDS */
+/* CONTENT ENDS */
+
+/* MEDIA QUERY STARTS */
+
+/* Tablet and Medium screen devices */
+@media screen and (max-width: 960px) {
+  .content-container {
+    width: 92%;
+  }
+
+  .contents {
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail .content .content-details {
+    gap: 1rem;
+  }
+
+  .thumbnail .content .content-details .details {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .thumbnail .content .content-details .details .details-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones and Smaller screen devices */
+@media screen and (max-width: 550px) {
+  .main .description h2 {
+    font-size: 18px;
+  }
+
+  .main .description .icons-links .links {
+    gap: 0.5rem;
+  }
+
+  .main .description .icons-links .subscribe .logo-and-name .channel-name h2 {
+    font-size: 15px;
+  }
+
+  button {
+    padding: 0.5rem 1.1rem;
+    font-size: 13px;
+  }
+
+  .main .description .icons-links .links {
+    gap: 0.5rem;
+  }
+
+  .main .description .icons-links .links .likes-and-dislikes {
+    font-size: 13px;
+  }
+
+  .main .description .icons-links .links .likes-and-dislikes .like p {
+    font-size: 12px;
+  }
+
+  .main .description .icons-links .links .likes-and-dislikes .like {
+    padding: 0.2rem 0.9rem;
+  }
+
+  .main .description .icons-links .links .likes-and-dislikes .dislike {
+    padding: 0.2rem 0.9rem;
+  }
+
+  .main .description .icons-links .links .share {
+    gap: 0.1rem;
+    padding: 0.1rem 0.8rem;
+  }
+
+  .main .description .icons-links .links .share p {
+    font-size: 14px;
+  }
+
+  .main .description .icons-links .links .more {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .main .description .more {
+    display: none;
+  }
+
+  .thumbnail .content .content-details {
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+  }
+
+  .content-container {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
+/* MEDIA QUERY ENDS */
